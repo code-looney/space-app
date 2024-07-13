@@ -5,6 +5,9 @@ const Home = () => {
   return (
     <div className='bg-parallax h-screen w-full bg-no-repeat bg-cover outline'>
         <Header />
+        <div>
+          
+        </div>
     </div>
   )
 }
