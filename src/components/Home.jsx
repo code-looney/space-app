@@ -21,7 +21,7 @@ const Home = () => {
             <div className='flex flex-col gap-[1em] text-center'>
                 {/* check for correct tracking dimension (h1) */}
               <h1 className='text-[1rem] flex flex-col justify-center items-center text-lightBlue font-barlowCondensed uppercase tracking-[0.125em]'>So, you want to travel to <br />
-                <span className='text-[5rem] text-white uppercase font-normal font-bellefair'>space</span>
+                <span className='text-[5rem] text-white uppercase font-normal font-bellefair'>spacee</span>
               </h1>
               {/* make sure the break-all is not making the para undreadable */}
               <p className='text-lightBlue font-barlow leading-[180%] outline'>Let’s face it; if you want to go to space, you might as well genuinely go to
