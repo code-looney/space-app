@@ -5,11 +5,13 @@ const Home = () => {
   const [hover, setHover] = useState("");
   const colors = ["bg-white"]
 
-  // function handleHoverOver () {
-  //   if (hover === "") {
-  //     setHover('white')
-  //   }
-  // }
+  function handleHoverOver () {
+    if (hover === "") {
+      setHover('white')
+    } else if (hover === "white") {
+      setHover("")
+    }
+  }
 
   return (
     <div className='flex flex-col bg-fixed items-center bg-parallax h-screen bg-no-repeat bg-cover overflow-hidden w-full break-all'>
@@ -28,8 +30,8 @@ const Home = () => {
             </div>
             <div className='h-[382px] w-full flex justify-center items-center outline-dotted relative overflow-hidden z-30'>
                 <button 
-                onMouseEnter={() => setHover("white")}
-                onMouseLeave={() => setHover("")} 
+                // onClick={() => handleHoverOver()}
+                onMouseLeave={() => handleHoverOver()} 
                 onTouchStart={() => setHover("white")} 
                 onTouchEnd={() => setHover("")} 
 
