@@ -10,12 +10,12 @@ const Header = () => {
         <div className=' h-[40px] w-[187.5px] outline flex justify-end items-center pr-[1.5em lg:hidden'>
             <Link><img className='h-[21px] w-[24px]' src="/assets/shared/icon-hamburger.svg" alt="" /></Link>
         </div>
-            <div className='lg:block hidden w-[640px] text-white outline'>
-              <ul className='flex gap'>
-                <li>Home</li>
-                <li>Destination</li>
-                <li>Crew</li>
-                <li>Technology</li>
+            <div className='lg:block hidden w-[640px] text-white outline lg:h-[96px] uppercase' >
+              <ul className='flex h-full justify-end items-center text-[14px]'>
+                <li className='pr-[4em]'>Home</li>
+                <li className='pr-[4em]'><span>01</span>Destination</li>
+                <li className='pr-[4em]'><span>02</span>Crew</li>
+                <li className='pr-[4em]'><span>03</span>Technology</li>
               </ul>
             </div>
     </div>
