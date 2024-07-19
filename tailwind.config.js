@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        "lg": "768px",
+        "xl": "1440px"
+      },
       fontFamily: {
         "bellefair": ["Bellefair", 'serif'],
         "barlowCondensed": ["Barlow Condensed", "sans-serif"],
