@@ -5,14 +5,6 @@ const Home = () => {
   const [hover, setHover] = useState("");
   const colors = ["bg-white"]
 
-  // function handleHoverOver () {
-  //   if (hover === "") {
-  //     setHover('white')
-  //   } else if (hover === "white") {
-  //     setHover("")
-  //   }
-  // }
-
   return (
     <div className='flex flex-col bg-fixed items-center bg-parallax h-screen bg-no-repeat bg-cover overflow-hidden w-full break-all'>
         <div className='overflow-scroll no-scrollbar w-full'>
