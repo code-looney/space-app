@@ -4,6 +4,7 @@ import Header from './Header'
 const Home = () => {
   const [hover, setHover] = useState("");
   const colors = ["bg-white"]
+  
 
   return (
     <div className='flex flex-col bg-fixed items-center bg-parallax h-screen bg-no-repeat bg-cover overflow-hidden w-full break-all'>

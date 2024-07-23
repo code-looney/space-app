@@ -1,0 +1,25 @@
+{
+    "navigation": [
+        {
+            "page": "Home",
+            "order": "00",
+            "id": 1
+        },
+        {
+            "page": "destination",
+            "order": "01",
+            "id": 2 
+        },
+        {
+            "page": "crew",
+            "order": "02",
+            "id": 3
+
+        },
+        {
+            "page": "technology",
+            "order": "03",
+            "id": 4 
+        }
+    ]
+}
