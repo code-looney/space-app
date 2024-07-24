@@ -8,16 +8,16 @@ const Home = () => {
 
   return (
     <div className='flex flex-col bg-fixed items-center bg-parallax h-screen bg-no-repeat bg-cover overflow-hidden w-full break-all'>
-        <div className='overflow-scroll no-scrollbar w-full'>
+        <div className='overflow-scroll no-scrollbar w-full out'>
           <Header />
-          <div className='p-[1.5em] text-white flex flex-col'>
+          <div className='p-[1.5em] lg:pb-[1.5em] lg:pl-[1.5em] lg:pr-[1.5em] lg:pt-[8em] text-white flex flex-col'>
             <div className='flex flex-col gap-[1em] text-center'>
                 {/* check for correct tracking dimension (h1) */}
-              <h1 className='text-[1rem] flex flex-col justify-center items-center text-lightBlue font-barlowCondensed uppercase tracking-[0.125em]'>So, you want to travel to <br />
-                <span className='text-[5rem] text-white uppercase font-normal font-bellefair'>space</span>
+              <h1 className='text-[1rem] lg:text-[1.25em] flex flex-col justify-center items-center text-lightBlue font-barlowCondensed uppercase tracking-[0.125em]'>So, you want to travel to <br />
+                <span className='text-[5rem] lg:text-[5em] text-white uppercase font-normal font-bellefair'>space</span>
               </h1>
               {/* make sure the break-all is not making the para undreadable */}
-              <p className='text-lightBlue font-barlow leading-[180%]'>Let’s face it; if you want to go to space, you might as well genuinely go to
+              <p className='text-lightBlue font-barlow leading-[180%] text-[0.9375em]'>Let’s face it; if you want to go to space, you might as well genuinely go to
                 outer space and not hover kind of on the edge of it. Well sit back, and relax
                 because we’ll give you a truly out of this world experience!</p>
             </div>
