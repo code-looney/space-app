@@ -14,7 +14,8 @@ const Header = () => {
     .then(res => res.json())
     .then(data => {
       setRouter(data.navigation)
-      setHideOrUnhideOrder(data.navigation[0].order)
+      console.log(data.navigation[0].order)
+      setPageOrder(data.navigation.order)
     }
     )
   }, [])
@@ -39,8 +40,10 @@ const Header = () => {
               <NavLink to={`/`}
                   onClick={() => handleNavLinkHover(route.id)}
                   className={`flex gap-3`}>
-                  <span className={`font-bold`}>{pageOrder}</span> 
-                  <span className=''>{pageOrder}{route.page}</span></NavLink>
+                  {/* <span className={`font-bold`}></span>  */}
+                  <span className={`${route.order === "00" ? "hidden" : ""} ${route.order === "00" ? "xl:block" : ""}`}>{route.order}</span>
+                  {route.page}
+                  </NavLink>
               </li>
             )
           })}
