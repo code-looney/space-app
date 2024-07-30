@@ -15,7 +15,7 @@ const Home = () => {
                 {/* check for correct tracking dimension (h1) */}
               <h1 className='text-[1rem] lg:text-[1.75rem] flex flex-col justify-center items-center text-lightBlue font-barlowCondensed uppercase break-all tracking-[0.125em] '>So, you want to travel to</h1>
               <h1 className='text-[5rem] lg:text-[9rem] text-white uppercase font-bellefair'>space</h1>
-              {/* make sure the break-all is not making the para undreadable */}
+              {/* make sure the break-all is not making the para undreada ble */}
               <p className='text-lightBlue font-barlow leading-[180%] text-[0.9375em] lg:text-[1rem] lg:w-[510px]'>Let’s face it; if you want to go to space, you might as well genuinely go to
                 outer space and not hover kind of on the edge of it. Well sit back, and relax
                 because we’ll give you a truly out of this world experience!</p>
