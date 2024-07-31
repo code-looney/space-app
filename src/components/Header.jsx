@@ -30,7 +30,7 @@ const Header = () => {
     <div className='w-full h-[88px] lg:h-[96px] flex justify-between lg:justify-end items-center font-barlowCondensed tracking-widest relative'>
         <div className='xl:w-[560p] gap-[64px] items-center lg:absolute lg:left-0 z-40 lg:h-[48px] lg:min-w-[160px] pl-[1.5em] lg:pl-[2.5em] lg:justify-start flex'>
             <Link><img className='h-[40px] w-[40px] lg:w-[48px] lg:h-[48px] cursor-pointer' src="/assets/shared/logo.svg" alt="" /></Link>
-            <hr className='xl:w-[560px] hidden xl:block bg-black  ' />
+            <hr className='w-[700px] hidden xl:block bg-black  ' />
         </div>
         <div className=' h-[40px] w-[187.5px] lg:h-[96px] flex justify-end items-center lg:absolute right-0 top-0 lg:pr-0 pr-[1.5em] '>
             <Link><img className='h-[21px] w-[24px] lg:hidden' src="/assets/shared/icon-hamburger.svg" alt="" /></Link>]
