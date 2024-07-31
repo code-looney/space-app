@@ -27,7 +27,7 @@ export default {
         base: "1rem"
       },
       backgroundImage: {
-        "parallax":  "url(/public/assets/home/background-home-mobile.jpg)"
+        "parallax":  "url(/assets/home/background-home-mobile.jpg)"
       },
     },
   },
