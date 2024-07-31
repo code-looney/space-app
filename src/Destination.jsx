@@ -1,9 +1,11 @@
-import React from "react"
+import React from 'react'
 
-const Destination = () => {
-    return (
-        <div></div>
-    )
+const Destination = (props) => {
+  const {...rest} = props;
+
+  return (
+    <div {...rest}>Destination</div>
+  )
 }
 
 export default Destination

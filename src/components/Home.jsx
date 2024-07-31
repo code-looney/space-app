@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Header from './Header'
+import MobileMenu from './MobileMenu';
 
 const Home = () => {
   const [hover, setHover] = useState("");
@@ -10,6 +11,7 @@ const Home = () => {
     <div className='flex flex-col bg-fixed items-center bg-parallax h-screen bg-no-repeat bg-cover overflow-hidden w-full break-all'>
         <div className='overflow-scroll no-scrollbar w-full'>
           <Header /> 
+          <MobileMenu />
           <div className='p-[1.5em] lg:pb-[1.5em] lg:pl-[1.5em] lg:pr-[1.5em] lg:pt-[8em] lg:gap-[80px] text-white flex flex-col '>
             <div className='flex flex-col gap-[1em] text-center items-center'>
                 {/* check for correct tracking dimension (h1) */}
