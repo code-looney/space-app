@@ -19,7 +19,7 @@ export default {
         normal: "400"
       },
       colors: {
-        "veryDarkNavy": "hsl(230, 35, 7)",
+        "veryDarkNavy": "hsl(230, 35%, 7%)",
         "lightBlue": "hsl(231, 77, 90)",
         "line": "#979797"
       },
