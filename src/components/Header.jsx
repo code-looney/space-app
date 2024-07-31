@@ -3,7 +3,6 @@ import { Link, NavLink } from 'react-router-dom'
 import { ThemeContext } from '../ThemeContext';
 
 const Header = () => {
-  const [router, setRouter] = useState(null);
   const [pageOrder, setPageOrder] = useState("");
   const [hoverUnderlineColor, setHoverUnderlineColor] = useState(1);
   const [hideOrUnhideOrder, setHideOrUnhideOrder] = useState(null);
@@ -14,11 +13,14 @@ const Header = () => {
 
   console.log(context)
 
+
+  console.log(context)
+
   useEffect(() => {
     fetch(`routes.json`)
     .then(res => res.json())
     .then(data => {
-      setRouter(data.navigation)
+      context.setRouter(data.navigation)
       // console.log(data.navigation[0].order)
       // console.log(data.navigation)
       setPageOrder(data.navigation.order)
@@ -41,7 +43,7 @@ const Header = () => {
             <Link><img className='h-[21px] w-[24px] lg:hidden' src="/assets/shared/icon-hamburger.svg" alt="" /></Link>]
         </div>
         <ul className='h-full lg:w-[640px] flex-row lg:backdrop-blur-xl lg:bg-white/5 justify-end items-center pr-[3em] hidden gap-[3em] text-[1rem] lg:flex relative z-10 text-white uppercase'>
-          {router && router.map(route => {
+          {context.router && context.router.map(route => {
             return (
               <li key={route.id} className={`h-full items-center flex-col justify-center relative z-20 border-b-4 flex gap-3 hover:border-opacity-50 ease-in-out duration-700 hover:border-b-white ${hoverUnderlineColor === route.id ? 'border-b-white' : 'border-b-transparent'}`}>
               <NavLink to={`/`}

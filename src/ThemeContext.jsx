@@ -3,12 +3,15 @@ import React, { createContext, useState } from "react";
 const ThemeContext = createContext();
 
 function ThemeProvider({ children }) {
-    const [routes, setRoutes] = useState(null);
+    const [hover, setHover] = useState("");
+    const [router, setRouter] = useState(null);
 
 
     const value = {
-        routes,
-        setRoutes,
+        router,
+        setRouter,
+        hover,
+        setHover
 
     };
 
