@@ -10,12 +10,6 @@ const Header = () => {
   const opacity = ["opacity-50"]
   const context = useContext(ThemeContext);
 
-
-  console.log(context)
-
-
-  console.log(context)
-
   useEffect(() => {
     fetch(`routes.json`)
     .then(res => res.json())
@@ -29,7 +23,6 @@ const Header = () => {
   }, [])
 
   function handleNavLinkHover (id)  {
-    console.log(id)
     setHoverUnderlineColor(id)
   } 
 

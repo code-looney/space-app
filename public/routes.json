@@ -21,5 +21,10 @@
             "order": "03",
             "id": 4 
         }
-    ]
+    ],
+
+    "mainButton": {
+        "text": "Explore"
+    }
+
 }
