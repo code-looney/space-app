@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <div className='flex flex-col bg-fixed items-center bg-parallax h-screen bg-no-repeat bg-cover overflow-hidden w-full break-all'>
-        <div className='overflow-scroll no-scrollbar w-full'>
+        <div className='overflow-x-scrol overflow-x-hidden  no-scrollbar w-full'>
           <Header /> 
           <MobileMenu />
           <div className='p-[1.5em] lg:pb-[1.5em] lg:pl-[1.5em] lg:pr-[1.5em] lg:pt-[8em] lg:gap-[80px] text-white flex flex-col '>
@@ -33,7 +33,7 @@ const Home = () => {
 
                 className='z-50 font-bellefair relative cursor-pointer uppercase text-[1.125rem] lg:text-[2rem] 
                 text-veryDarkNavy w-[144px] lg:w-[272px] lg:min-h-[272px] min-h-[144px] rounded-full 
-                flex justify-center items-center bg-white select-none'>{context.exButtonText}</button>
+                flex justify-center items-center bg-white select-none'>{context.mainButtonText}</button>
                 {/* look for the right dimensions */}
                 <div className={`w-[480px] h-[480px] flex justify-center items-center rounded-full bg-${context.hover} opacity-[10%] absolute ease-in-out duration-700 z-40`}></div>
             </div>

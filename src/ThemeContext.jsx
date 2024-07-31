@@ -5,7 +5,7 @@ const ThemeContext = createContext();
 function ThemeProvider({ children }) {
     const [hover, setHover] = useState("");
     const [router, setRouter] = useState(null);
-    const [exButtonText, setExButtonText] = useState(null);
+    const [mainButtonText, setMainButtonText] = useState(null);
 
 
     useEffect(() => {
@@ -13,8 +13,8 @@ function ThemeProvider({ children }) {
         .then(res => res.json())
         .then(data => {
             console.log(data.mainButton.text) // Tijdelijk
-            const rep = data.mainButton.text;
-            setExButtonText(rep)
+            const text = data.mainButton.text;
+            setMainButtonText(text)
         })
     }, [])
 
@@ -24,8 +24,8 @@ function ThemeProvider({ children }) {
         setRouter,
         hover,
         setHover,
-        exButtonText,
-        setExButtonText
+        mainButtonText,
+        setMainButtonText
 
     };
 
