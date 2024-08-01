@@ -1,11 +1,12 @@
 import React, { createContext, useState, useEffect } from "react";
 
-const ThemeContext = createContext();
+const AppContext = createContext();
 
-function ThemeProvider({ children }) {
+function AppProvider({ children }) {
     const [hover, setHover] = useState("");
     const [router, setRouter] = useState(null);
     const [mainButtonText, setMainButtonText] = useState(null);
+    const [pageOrder, setPageOrder] = useState("");
 
 
     useEffect(() => {
@@ -25,15 +26,17 @@ function ThemeProvider({ children }) {
         hover,
         setHover,
         mainButtonText,
-        setMainButtonText
+        setMainButtonText,
+        pageOrder,
+        setPageOrder
 
     };
 
     return (
-        <ThemeContext.Provider value={value}>
+        <AppContext.Provider value={value}>
             {children}
-        </ThemeContext.Provider>
+        </AppContext.Provider>
     );
 }
 
-export { ThemeContext, ThemeProvider };
+export { AppContext, AppProvider };

@@ -1,10 +1,10 @@
 import React, {useState, useContext} from 'react'
 import Header from './Header'
 import MobileMenu from './MobileMenu';
-import { ThemeContext } from '../ThemeContext';
+import { AppContext } from '../AppContext';
 
 const Home = () => {
-  const context = useContext(ThemeContext);
+  const context = useContext(AppContext);
   const colors = ["bg-white"]
 
   return (

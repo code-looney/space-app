@@ -1,23 +1,22 @@
 import React, {useContext, useEffect, useState} from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { ThemeContext } from '../ThemeContext';
+import { AppContext } from '../AppContext';
 
 const Header = () => {
-  const [pageOrder, setPageOrder] = useState("");
   const [hoverUnderlineColor, setHoverUnderlineColor] = useState(1);
   const [hideOrUnhideOrder, setHideOrUnhideOrder] = useState(null);
   const hoverState = ["border-b-4"]
   const opacity = ["opacity-50"]
-  const context = useContext(ThemeContext);
+  const context = useContext(AppContext);
+
+  console.log(context)
 
   useEffect(() => {
     fetch(`routes.json`)
     .then(res => res.json())
     .then(data => {
       context.setRouter(data.navigation)
-      // console.log(data.navigation[0].order)
-      // console.log(data.navigation)
-      setPageOrder(data.navigation.order)
+      context.setPageOrder(data.navigation.order)
     }
     )
   }, [])
@@ -33,7 +32,7 @@ const Header = () => {
             <hr className='w-[700px] hidden xl:block bg-black  ' />
         </div>
         <div className=' h-[40px] w-[187.5px] lg:h-[96px] flex justify-end items-center lg:absolute right-0 top-0 lg:pr-0 pr-[1.5em] '>
-            <Link><img className='h-[21px] w-[24px] lg:hidden' src="/assets/shared/icon-hamburger.svg" alt="" /></Link>]
+            <Link><img className='h-[21px] w-[24px] lg:hidden' src="/assets/shared/icon-hamburger.svg" alt="" /></Link>
         </div>
         <ul className='h-full lg:w-[640px] flex-row lg:backdrop-blur-xl lg:bg-white/5 justify-end items-center pr-[3em] hidden gap-[3em] text-[1rem] lg:flex relative z-10 text-white uppercase'>
           {context.router && context.router.map(route => {
