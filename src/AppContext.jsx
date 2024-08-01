@@ -7,6 +7,9 @@ function AppProvider({ children }) {
     const [router, setRouter] = useState(null);
     const [mainButtonText, setMainButtonText] = useState(null);
     const [pageOrder, setPageOrder] = useState("");
+    const [hoverUnderlineColor, setHoverUnderlineColor] = useState(1);
+    const [hideOrUnhideOrder, setHideOrUnhideOrder] = useState(null);
+
 
 
     useEffect(() => {
@@ -20,6 +23,16 @@ function AppProvider({ children }) {
     }, [])
 
 
+    useEffect(() => {
+        fetch(`routes.json`)
+        .then(res => res.json())
+        .then(data => {
+        setRouter(data.navigation)
+        setPageOrder(data.navigation.order)
+        })
+    }, [])
+
+
     const value = {
         router,
         setRouter,
@@ -28,7 +41,11 @@ function AppProvider({ children }) {
         mainButtonText,
         setMainButtonText,
         pageOrder,
-        setPageOrder
+        setPageOrder,
+        hoverUnderlineColor,
+        setHoverUnderlineColor,
+        hideOrUnhideOrder,
+        setHideOrUnhideOrder
 
     };
 

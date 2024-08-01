@@ -3,26 +3,12 @@ import { Link, NavLink } from 'react-router-dom'
 import { AppContext } from '../AppContext';
 
 const Header = () => {
-  const [hoverUnderlineColor, setHoverUnderlineColor] = useState(1);
-  const [hideOrUnhideOrder, setHideOrUnhideOrder] = useState(null);
   const hoverState = ["border-b-4"]
   const opacity = ["opacity-50"]
   const context = useContext(AppContext);
 
-  console.log(context)
-
-  useEffect(() => {
-    fetch(`routes.json`)
-    .then(res => res.json())
-    .then(data => {
-      context.setRouter(data.navigation)
-      context.setPageOrder(data.navigation.order)
-    }
-    )
-  }, [])
-
   function handleNavLinkHover (id)  {
-    setHoverUnderlineColor(id)
+    context.setHoverUnderlineColor(id)
   } 
 
   return (
@@ -37,7 +23,7 @@ const Header = () => {
         <ul className='h-full lg:w-[640px] flex-row lg:backdrop-blur-xl lg:bg-white/5 justify-end items-center pr-[3em] hidden gap-[3em] text-[1rem] lg:flex relative z-10 text-white uppercase'>
           {context.router && context.router.map(route => {
             return (
-              <li key={route.id} className={`h-full items-center flex-col justify-center relative z-20 border-b-4 flex gap-3 hover:border-opacity-50 ease-in-out duration-700 hover:border-b-white ${hoverUnderlineColor === route.id ? 'border-b-white' : 'border-b-transparent'}`}>
+              <li key={route.id} className={`h-full items-center flex-col justify-center relative z-20 border-b-4 flex gap-3 hover:border-opacity-50 ease-in-out duration-700 hover:border-b-white ${context.hoverUnderlineColor === route.id ? 'border-b-white' : 'border-b-transparent'}`}>
               <NavLink to={`/`}
                   onClick={() => handleNavLinkHover(route.id)}
                   className={`flex gap-3`}>
