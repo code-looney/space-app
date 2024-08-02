@@ -11,7 +11,6 @@ function AppProvider({ children }) {
     const [hideOrUnhideOrder, setHideOrUnhideOrder] = useState(null);
 
 
-
     useEffect(() => {
         fetch(`/routes.json`)
         .then(res => res.json())
@@ -32,6 +31,10 @@ function AppProvider({ children }) {
         })
     }, [])
 
+    function handleNavLinkHover (id) {
+        setHoverUnderlineColor(id)
+      } 
+    
 
     const value = {
         router,
@@ -45,7 +48,8 @@ function AppProvider({ children }) {
         hoverUnderlineColor,
         setHoverUnderlineColor,
         hideOrUnhideOrder,
-        setHideOrUnhideOrder
+        setHideOrUnhideOrder,
+        handleNavLinkHover
 
     };
 

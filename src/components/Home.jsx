@@ -8,8 +8,8 @@ const Home = () => {
   const colors = ["bg-white"]
 
   return (
-    <div className='flex flex-col bg-fixed items-center bg-parallax h-screen bg-no-repeat bg-cover overflow-hidden w-full break-all'>
-        <div className='overflow-x-scrol overflow-x-hidden  no-scrollbar w-full'>
+    <div className='flex flex-col bg-fixed items-center bg-parallax  h-screen bg-no-repeat bg-cover overflow-hidden w-full break-all'>
+      <div className='overflow-x-scrol overflow-x-hidden no-scrollbar w-full'>
           <Header /> 
           <MobileMenu />
           <div className='p-[1.5em] lg:pb-[1.5em] lg:pl-[1.5em] lg:pr-[1.5em] lg:pt-[8em] lg:gap-[80px] text-white flex flex-col '>
@@ -22,7 +22,7 @@ const Home = () => {
                 outer space and not hover kind of on the edge of it. Well sit back, and relax
                 because we’ll give you a truly out of this world experience!</p>
             </div>
-            <div className=' h-[382px] lg:h-[272px] outline-4 w-full flex justify-center items-center relative z-30'>
+            <div className=' h-[382px] lg:h-[272px] w-full flex justify-center items-center relative z-30'>
                 <button 
                 // onClick={() => handleHoverOver()}
 
