@@ -10,6 +10,7 @@ function AppProvider({ children }) {
     const [hideOrUnhideOrder, setHideOrUnhideOrder] = useState(null);
     const [hoverUnderlineColor, setHoverUnderlineColor] = useState(1);
     const [toggleMobileMenu, setToggleMobileMenu] = useState("hidden")
+    const [toggleMobileMenuIcons, setToggleMobileMenuIcons] = useState("hamburger")
 
 
     useEffect(() => {
@@ -37,7 +38,13 @@ function AppProvider({ children }) {
       } 
 
     function handleToggleMobileMenu () {
-        setToggleMobileMenu("flex")
+        if (toggleMobileMenu === "hidden") {
+            setToggleMobileMenu("flex")
+            setToggleMobileMenuIcons("close")
+        } else if (toggleMobileMenu === "flex") {
+            setToggleMobileMenu("hidden")
+            setToggleMobileMenuIcons("close")
+        }
     }
 
 
@@ -57,7 +64,8 @@ function AppProvider({ children }) {
         handleNavLinkHover,
         handleToggleMobileMenu,
         toggleMobileMenu,
-        setToggleMobileMenu
+        setToggleMobileMenu,
+        toggleMobileMenuIcons
 
     };
 
