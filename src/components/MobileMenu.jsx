@@ -21,7 +21,7 @@ const MobileMenu = () => {
       ${context.toggleMobileMenu}`}>
         <ul className='h-full w-full flex outline flex-col gap-[2em]'>
         <li className=' h-[88px] lg:h-[96px] flex justify-end items-center pr-[1.5em] '>
-            <button onClick={() => context.handleToggleMobileMenu()}><img className='w-[24px]' src="/assets/shared/icon-close.svg" alt="close icon" /></button>
+            <button aria-expanded onClick={() => context.handleToggleMobileMenu()}><img className='w-[24px]' src="/assets/shared/icon-close.svg" alt="close icon" /></button>
         </li>
           {context.router && context.router.map(route => {
             return (
