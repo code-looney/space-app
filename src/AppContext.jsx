@@ -7,8 +7,9 @@ function AppProvider({ children }) {
     const [router, setRouter] = useState(null);
     const [mainButtonText, setMainButtonText] = useState(null);
     const [pageOrder, setPageOrder] = useState("");
-    const [hoverUnderlineColor, setHoverUnderlineColor] = useState(1);
     const [hideOrUnhideOrder, setHideOrUnhideOrder] = useState(null);
+    const [hoverUnderlineColor, setHoverUnderlineColor] = useState(1);
+    const [toggleMobileMenu, setToggleMobileMenu] = useState("hidden")
 
 
     useEffect(() => {
@@ -34,7 +35,11 @@ function AppProvider({ children }) {
     function handleNavLinkHover (id) {
         setHoverUnderlineColor(id)
       } 
-    
+
+    function handleToggleMobileMenu () {
+        setToggleMobileMenu("flex")
+    }
+
 
     const value = {
         router,
@@ -45,11 +50,14 @@ function AppProvider({ children }) {
         setMainButtonText,
         pageOrder,
         setPageOrder,
-        hoverUnderlineColor,
-        setHoverUnderlineColor,
         hideOrUnhideOrder,
         setHideOrUnhideOrder,
-        handleNavLinkHover
+        hoverUnderlineColor,
+        setHoverUnderlineColor,
+        handleNavLinkHover,
+        handleToggleMobileMenu,
+        toggleMobileMenu,
+        setToggleMobileMenu
 
     };
 
