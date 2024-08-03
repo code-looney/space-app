@@ -9,44 +9,33 @@ function AppProvider({ children }) {
     const [pageOrder, setPageOrder] = useState("");
     const [hideOrUnhideOrder, setHideOrUnhideOrder] = useState(null);
     const [hoverUnderlineColor, setHoverUnderlineColor] = useState(1);
-    const [toggleMobileMenu, setToggleMobileMenu] = useState(false)
-    const [toggleMobileMenuIcons, setToggleMobileMenuIcons] = useState("hamburger")
-
+    const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
 
     useEffect(() => {
         fetch(`/routes.json`)
-        .then(res => res.json())
-        .then(data => {
-            console.log(data.mainButton.text) // Tijdelijk
-            const text = data.mainButton.text;
-            setMainButtonText(text)
-        })
-    }, [])
-
+            .then(res => res.json())
+            .then(data => {
+                console.log(data.mainButton.text); // Temporarily
+                setMainButtonText(data.mainButton.text);
+            });
+    }, []);
 
     useEffect(() => {
         fetch(`routes.json`)
-        .then(res => res.json())
-        .then(data => {
-        setRouter(data.navigation)
-        setPageOrder(data.navigation.order)
-        })
-    }, [])
+            .then(res => res.json())
+            .then(data => {
+                setRouter(data.navigation);
+                setPageOrder(data.navigation.order);
+            });
+    }, []);
 
-    function handleNavLinkHover (id) {
-        setHoverUnderlineColor(id)
-      } 
+    const handleNavLinkHover = (id) => {
+        setHoverUnderlineColor(id);
+    };
 
-    function handleToggleMobileMenu () {
-        if (toggleMobileMenu === false) {
-            setToggleMobileMenu(true)
-            setToggleMobileMenuIcons(true)
-        } else if (toggleMobileMenu === true) {
-            setToggleMobileMenu(false)
-            setToggleMobileMenuIcons(false)
-        }
-    }
-
+    const handleToggleMobileMenu = () => {
+        setToggleMobileMenu(prevState => !prevState);
+    };
 
     const value = {
         router,
@@ -64,8 +53,7 @@ function AppProvider({ children }) {
         handleNavLinkHover,
         handleToggleMobileMenu,
         toggleMobileMenu,
-        toggleMobileMenuIcons
-
+        toggleMobileMenuIcons: toggleMobileMenu ? "close" : "hamburger" // Derived state
     };
 
     return (
