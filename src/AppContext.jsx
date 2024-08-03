@@ -64,7 +64,6 @@ function AppProvider({ children }) {
         handleNavLinkHover,
         handleToggleMobileMenu,
         toggleMobileMenu,
-        setToggleMobileMenu,
         toggleMobileMenuIcons
 
     };
