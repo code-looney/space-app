@@ -9,7 +9,7 @@ function AppProvider({ children }) {
     const [pageOrder, setPageOrder] = useState("");
     const [hideOrUnhideOrder, setHideOrUnhideOrder] = useState(null);
     const [hoverUnderlineColor, setHoverUnderlineColor] = useState(1);
-    const [toggleMobileMenu, setToggleMobileMenu] = useState("hidden")
+    const [toggleMobileMenu, setToggleMobileMenu] = useState(false)
     const [toggleMobileMenuIcons, setToggleMobileMenuIcons] = useState("hamburger")
 
 
@@ -38,12 +38,12 @@ function AppProvider({ children }) {
       } 
 
     function handleToggleMobileMenu () {
-        if (toggleMobileMenu === "hidden") {
-            setToggleMobileMenu("flex")
-            setToggleMobileMenuIcons("close")
-        } else if (toggleMobileMenu === "flex") {
-            setToggleMobileMenu("hidden")
-            setToggleMobileMenuIcons("close")
+        if (toggleMobileMenu === false) {
+            setToggleMobileMenu(true)
+            setToggleMobileMenuIcons(true)
+        } else if (toggleMobileMenu === true) {
+            setToggleMobileMenu(false)
+            setToggleMobileMenuIcons(false)
         }
     }
 
