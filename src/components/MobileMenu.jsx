@@ -5,10 +5,11 @@ import { Transition } from '@headlessui/react';
 
 const MobileMenu = () => {
    const context = useContext(AppContext);
+   console.log(context.toggleMobileMenu)
 
   return (
     <Transition
-      show={context.toggleMobileMenu === true} // bedenkt een oplossing ( ease in )
+      show={context.toggleMobileMenu} // bedenkt een oplossing ( ease in )
       enter="transition-transform duration-700 ease-in-out"
       enterFrom="transform translate-x-full opacity-0"
       enterTo="transform translate-x-0 opacity-100"
@@ -16,7 +17,8 @@ const MobileMenu = () => {
       leaveFrom="transform translate-x-0 opacity-100"
       leaveTo="transform translate-x-full opacity-0"
     >
-    <div className={` flex-col w-[254px] h-screen right-0 top-0 absolute no-scrollbar text-white backdrop-blur-xl z-40 bg-white/5 ${context.toggleMobileMenu === true ? "flex" : "hidden"}`}>
+    <div className={` flex-col w-[254px] h-screen right-0 top-0 absolute no-scrollbar text-white backdrop-blur-xl z-40 bg-white/5 
+      ${context.toggleMobileMenu}`}>
         <ul className='h-full w-full flex outline flex-col gap-[2em]'>
         <div className=' h-[88px] lg:h-[96px] flex justify-end items-center pr-[1.5em] '>
             <Link onClick={() => context.handleToggleMobileMenu()}><img className='w-[24px]' src="/assets/shared/icon-close.svg" alt="" /></Link>
