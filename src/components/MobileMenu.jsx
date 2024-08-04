@@ -14,10 +14,10 @@ const MobileMenu = () => {
             enterFrom="transform translate-x-full opacity-0"
             enterTo="transform translate-x-0 opacity-100"
             leave="transition-transform duration-700 ease-in-out"
-            // leaveFrom="transform translate-x-0 opacity-100"
+            leaveFrom="transform translate-x-0 opacity-100"
             leaveTo="transform translate-x-full opacity-0"
         >
-            <div className={`flex-col w-[254px] h-screen right-0 top-0 absolute no-scrollbar ${context.toggleMobileMenu === true ? `transition transform duration-700 ease-in-out translate-x-0 opacity-100` : "" } text-white backdrop-blur-xl z-40 bg-white/5 
+            <div className={`flex-col w-[254px] h-full right-0 top-0 absolute no-scrollbar ${context.toggleMobileMenu === true ? `transition transform duration-700 ease-in-out translate-x-0 opacity-100` : "" } text-white backdrop-blur-xl z-40 bg-white/5 
               ${context.toggleMobileMenu === false ? `transition transform duration-700 ease-in-out translate-x-0 opacity-100` : "" }`}>
                 <ul className='h-full w-full flex flex-col gap-[2em]'>
                     <li className='h-[88px] lg:h-[96px] flex justify-end items-center pr-[1.5em]'>
