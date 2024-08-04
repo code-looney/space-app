@@ -11,7 +11,7 @@ const MobileMenu = () => {
         <Transition
           show={context.toggleMobileMenu}
           enter="transition-transform duration-700 ease-in-out"
-          enterFrom="translate-x-full"
+          enterFrom="transform translate-x-full opacity-0"
           enterTo="transform translate-x-0 opacity-100"
           leave="transition-transform duration-700 ease-in-out"
           leaveFrom="transform translate-x-0 opacity-100"
