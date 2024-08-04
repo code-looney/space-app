@@ -5,6 +5,7 @@ import { Transition } from '@headlessui/react';
 
 const MobileMenu = () => {
     const context = useContext(AppContext);
+    console.log(context.toggleMobileMenu)
 
     return (
         <Transition
@@ -16,11 +17,12 @@ const MobileMenu = () => {
             leaveFrom="transform translate-x-0 opacity-100"
             leaveTo="transform translate-x-full opacity-0"
         >
-            <div className={`flex-col w-[254px] h-screen right-0 top-0 absolute no-scrollbar text-white backdrop-blur-xl z-40 bg-white/5`}>
-                <ul className='h-full w-full flex outline flex-col gap-[2em]'>
+            <div className={`flex-col w-[254px] h-screen right-0 top-0 absolute no-scrollbar text-white backdrop-blur-xl z-40 bg-white/5 
+              ${context.toggleMobileMenu === false ? `transition transform duration-700 ease-in-out translate-x-0 opacity-100` : "" }`}>
+                <ul className='h-full w-full flex flex-col gap-[2em]'>
                     <li className='h-[88px] lg:h-[96px] flex justify-end items-center pr-[1.5em]'>
                         <button aria-expanded onClick={context.handleToggleMobileMenu}>
-                            <img className='w-[24px]' src={`/assets/shared/icon-${context.toggleMobileMenuIcons}.svg`} alt="menu icon" />
+                            <img className='w-[24px]' src={`/assets/shared/icon-close.svg`} alt="menu icon" />
                         </button>
                     </li>
                     {context.router && context.router.map(route => (

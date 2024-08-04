@@ -10,6 +10,7 @@ function AppProvider({ children }) {
     const [hideOrUnhideOrder, setHideOrUnhideOrder] = useState(null);
     const [hoverUnderlineColor, setHoverUnderlineColor] = useState(1);
     const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         fetch(`/routes.json`)
@@ -53,6 +54,7 @@ function AppProvider({ children }) {
         handleNavLinkHover,
         handleToggleMobileMenu,
         toggleMobileMenu,
+        isOpen,
         toggleMobileMenuIcons: toggleMobileMenu ? "close" : "hamburger" // Derived state
     };
 
