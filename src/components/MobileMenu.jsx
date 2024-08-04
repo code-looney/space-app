@@ -9,13 +9,13 @@ const MobileMenu = () => {
 
     return (
         <Transition
-            show={context.toggleMobileMenu}
-            // enter="transition-transform duration-700 ease-in-out"
-            enterFrom="transform translate-x-full opacity-0"
-            enterTo="transform translate-x-0 opacity-100"
-            leave="transition-transform duration-700 ease-in-out"
-            // leaveFrom="transform translate-x-0 opacity-100"
-            leaveTo="transform translate-x-full opacity-0"
+          show={context.toggleMobileMenu}
+          // enter="transition-transform duration-700 ease-in-out"
+          enterFrom="transform translate-x-full opacity-0"
+          enterTo="transform translate-x-0 opacity-100"
+          // leave="transition-transform duration-700 ease-in-out"
+          // leaveFrom="transform translate-x-0 opacity-100"
+          leaveTo="transform translate-x-full opacity-0"
         >
             <div className={`flex-col w-[254px] h-full right-0 top-0 absolute no-scrollbar 
               ${context.toggleMobileMenu === false ? `transition transform duration-700 ease-in-out translate-x-0 opacity-100` : "" }
