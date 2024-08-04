@@ -8,15 +8,15 @@ const Home = () => {
   const colors = ["bg-white"]
 
   return (
-    <div className='flex flex-col bg-fixed items-center bg-parallax  h-screen bg-no-repeat bg-cover overflow-hidden w-full break-all'>
+    <div className='flex flex-col bg-fixed items-center bg-parallax h-screen bg-no-repeat bg-cover overflow-hidden w-full'>
       <div className='overflow-x-scrol overflow-x-hidden no-scrollbar w-full'>
           <Header /> 
           <MobileMenu />
           <div className='p-[1.5em] lg:pb-[1.5em] lg:pl-[1.5em] lg:pr-[1.5em] lg:pt-[8em] lg:gap-[80px] text-white flex flex-col '>
             <div className='flex flex-col gap-[1em] text-center items-center'>
                 {/* check for correct tracking dimension (h1) */}
-              <h1 className='text-[1rem] lg:text-[1.75rem] flex flex-col justify-center items-center text-lightBlue font-barlowCondensed uppercase break-all tracking-[0.125em] '>So, you want to travel to</h1>
-              <h1 className='text-[5rem] lg:text-[9rem] text-white uppercase font-bellefair'>space</h1>
+              <h1 className='text-[1rem] lg:text-[1.75rem] flex flex-col justify-center items-center text-lightBlue font-barlowCondensed uppercase tracking-[0.125em] '>So, you want to travel to</h1>
+              <h1 className='text-[5rem] lg:text-[9rem] text-white uppercase break-all font-bellefair'>space</h1>
               {/* make sure the break-all is not making the para undreada ble */}
               <p className='text-lightBlue font-barlow leading-[180%] text-[0.9375em] lg:text-[1rem] lg:w-[510px]'>Let’s face it; if you want to go to space, you might as well genuinely go to
                 outer space and not hover kind of on the edge of it. Well sit back, and relax
