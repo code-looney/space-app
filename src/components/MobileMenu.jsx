@@ -10,17 +10,19 @@ const MobileMenu = () => {
     return (
         <Transition
             show={context.toggleMobileMenu}
-            enter="transition-transform duration-700 ease-in-out"
+            // enter="transition-transform duration-700 ease-in-out"
             enterFrom="transform translate-x-full opacity-0"
             enterTo="transform translate-x-0 opacity-100"
             leave="transition-transform duration-700 ease-in-out"
-            leaveFrom="transform translate-x-0 opacity-100"
+            // leaveFrom="transform translate-x-0 opacity-100"
             leaveTo="transform translate-x-full opacity-0"
         >
-            <div className={`flex-col w-[254px] h-full right-0 top-0 absolute no-scrollbar text-white backdrop-blur-xl z-40 bg-white/5`}>
+            <div className={`flex-col w-[254px] h-full right-0 top-0 absolute no-scrollbar 
+              ${context.toggleMobileMenu === false ? `transition transform duration-700 ease-in-out translate-x-0 opacity-100` : "" }
+               text-white backdrop-blur-xl z-40 bg-white/5`}>
                 <ul className='h-full w-full flex flex-col gap-[2em]'>
                     <li className='h-[88px] lg:h-[96px] flex justify-end items-center pr-[1.5em]'>
-                        <button aria-expanded onClick={context.handleToggleMobileMenu}>
+                        <button aria-expanded={context.toggleMobileMenu}  onClick={context.handleToggleMobileMenu}>
                             <img className='w-[24px]' src={`/assets/shared/icon-close.svg`} alt="menu icon" />
                         </button>
                     </li>
