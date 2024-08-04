@@ -8,7 +8,7 @@ const Home = () => {
   const colors = ["bg-white"]
 
   return (
-    <div className='flex flex-col bg-fixed items-center bg-parallax h-screen bg-no-repeat bg-cover overflow-hidden w-full'>
+    <div className='flex flex-col bg-fixed items-center absolute bg-parallax h-screen bg-no-repeat bg-cover overflow-hidden w-full'>
       <div className='overflow-x-scrol overflow-x-hidden no-scrollbar w-full'>
           <Header /> 
           <MobileMenu />
