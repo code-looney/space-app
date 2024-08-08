@@ -47,16 +47,20 @@ function AppProvider({ children }) {
 
     const destinationNavigation = [
         {
-            page: "Moon"
+            page: "Moon",
+            id: 1
         },
         {
-            page: "mars"
+            page: "mars",
+            id: 2,
         }, 
         {
-            page: "Europa"
+            page: "Europa",
+            id: 3
         }, 
         {
-            page: "Titan"
+            page: "Titan",
+            id: 4
         }
     ]
 
