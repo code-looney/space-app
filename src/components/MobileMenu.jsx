@@ -23,7 +23,7 @@ const MobileMenu = () => {
                 <ul className='h-full w-full flex flex-col gap-[2em]'>
                     <li className='h-[88px] lg:h-[96px] flex justify-end items-center pr-[1.5em]'>
                         <button aria-expanded={context.toggleMobileMenu}  onClick={context.handleToggleMobileMenu}>
-                            <img className='w-[24px]' src={`/assets/shared/icon-close.svg`} alt="menu icon" />
+                            <img className='w-[24px]' src={`public/assets/icon-close.svg`} alt="menu icon" />
                         </button>
                     </li>
                     {context.router && context.router.map(route => (
