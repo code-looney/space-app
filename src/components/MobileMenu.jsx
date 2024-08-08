@@ -5,7 +5,6 @@ import { Transition } from '@headlessui/react';
 
 const MobileMenu = () => {
     const context = useContext(AppContext);
-    console.log(context.toggleMobileMenu)
 
     return (
         <Transition
@@ -17,7 +16,7 @@ const MobileMenu = () => {
           leaveFrom="transform translate-x-0 opacity-100"
           leaveTo="transform translate-x-full opacity-0"
           >
-            <div className={`flex-col w-[254px] h-full right-0 top-0 absolute no-scrollbar 
+            <div className={`flex-col w-[254px] h-full right-0 top-0 absolute no-scrollbar md:hidden 
               ${context.toggleMobileMenu === false ? `transition transform duration-700 ease-in-out translate-x-0 opacity-100` : "" }
                text-white backdrop-blur-xl z-40 bg-white/5`}>
                 <ul className='h-full w-full flex flex-col gap-[2em]'>
@@ -26,11 +25,11 @@ const MobileMenu = () => {
                             <img className='w-[24px]' src={`public/assets/icon-close.svg`} alt="menu icon" />
                         </button>
                     </li>
-                    {context.router && context.router.map(route => (
+                    {context.navigation && context.navigation.map(route => (
                         <li key={route.id} className={`pl-[2em] flex uppercase tracking-[0.125em] border-r-4 gap-3 hover:border-opacity-50 ease-in-out duration-700 hover:border-r-white 
                             ${context.hoverUnderlineColor === route.id ? 'border-r-white' : 'border-r-transparent'}`}>
                             <NavLink onClick={() => context.handleNavLinkHover(route.id)} 
-                                className="flex gap-3 justify-self-center text-[16px] font-barlowCondensed">
+                                className="flex gap-3 justify-self-center text-[1rem] font-barlowCondensed">
                                 <span className='font-bold'>{route.order}</span>
                                 {route.page}
                             </NavLink>

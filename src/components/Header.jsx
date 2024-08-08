@@ -18,7 +18,7 @@ const Header = () => {
         {/* <li className=' w-full mr-24 xl:block relative xl:z-50 '> */}
         <hr className='w-full hidden xl:block mr-20 opacity-25' />
         {/* </li> */}
-          {context.router && context.router.map(route => {
+          {context.navigation && context.navigation.map(route => {
             return (
               <li key={route.id} className={`h-full items-center flex-col justify-center relative z-20 xl:z-0 border-b-4 flex gap-3 ${context.hoverUnderlineColor === route.id ? null : "hover:border-opacity-50 "} ease-in-out duration-700 hover:border-b-white 
               ${context.hoverUnderlineColor === route.id ? 'border-b-white' : 'border-b-transparent'}`}>
