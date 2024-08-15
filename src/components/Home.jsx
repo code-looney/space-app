@@ -13,7 +13,7 @@ const Home = () => {
       <div className='overflow-x-scrol overflow-x-hidden no-scrollbar w-full'>
           <Header /> 
           <MobileMenu />
-          <div className='p-[1.5em] lg:pb-[1.5em] lg:pl-[1.5em] lg:pr-[1.5em] lg:pt-[8em] lg:gap-[80px] text-white flex flex-col '>
+          <div className='p-[1.5em] lg:pb-[1.5em] lg:pl-[1.5em] lg:pr-[1.5em] lg:pt-[8em] lg:gap-[5em] text-white flex flex-col '>
             <div className='flex flex-col gap-[1em] text-center items-center'>
                 {/* check for correct tracking dimension (h1) */}
               <h1 className='text-[1rem] lg:text-[1.75rem] flex flex-col justify-center items-center text-lightBlue font-barlowCondensed uppercase tracking-[0.125em] '>So, you want to travel to</h1>

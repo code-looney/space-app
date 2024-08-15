@@ -9,7 +9,7 @@ const Header = () => {
     <div className='w-full h-[88px] lg:h-[96px] flex justify-between lg:justify-end items-center font-barlowCondensed tracking-widest relative'>
         <div className='xl:w-full relative gap-[64px] items-center lg:absolute public/assets/icon-close.svg lg:left-0 z-40 xl:z-0 lg:h-[48px] lg:min-w-[160px] pl-[1.5em] lg:pl-[2.5em] lg:justify-start flex'>
             <Link><img className='h-[40px] w-[40px] lg:w-[48px] lg:h-[48px] cursor-pointer' src="/assets/shared/logo.svg" alt="logo" /></Link>
-            <hr className='w-full translate-x-32 outline hidden absolute xl:block opacity-25' />
+            <hr className='w-full translate-x-32 hidden absolute xl:block opacity-25' />
         </div>
         <div className='h-[40px] w-[187.5px] lg:h-[96px] flex justify-end items-center lg:absolute right-0 top-0 lg:pr-0 pr-[1.5em] '>
             <Link onClick={() => context.handleToggleMobileMenu()}><img className='lg:hidden' src="/assets/icon-hamburger.svg" alt="hamburger icon" /></Link>
