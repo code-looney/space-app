@@ -1,46 +1,39 @@
-import React, {useState, useContext} from 'react'
-import Header from './Header'
-import MobileMenu from './MobileMenu';
-import { AppContext } from '../AppContext';
+import Box from "./Box"
+import Container from "./Container"
+import ExploreButton from "./ExploreButton"
+import Header from "./Header"
+import MobileMenu from "./MobileMenu"
+import BoxContent from "./BoxContent"
 
 const Home = () => {
-  const context = useContext(AppContext);
-  const colors = ["bg-white"]
-  console.log(context.mainButton.text)
 
   return (
-    <div className='flex flex-col bg-fixed items-center absolute bg-space h-screen bg-no-repeat bg-cover overflow-hidden w-full'>
-      <div className='overflow-x-scrol overflow-x-hidden no-scrollbar w-full'>
-          <Header /> 
-          <MobileMenu />
-          <div className='p-[1.5em] lg:pb-[1.5em] lg:pl-[1.5em] lg:pr-[1.5em] lg:pt-[8em] lg:gap-[5em] text-white flex flex-col '>
-            <div className='flex flex-col gap-[1em] text-center items-center'>
-                {/* check for correct tracking dimension (h1) */}
-              <h1 className='text-[1rem] lg:text-[1.75rem] flex flex-col justify-center items-center text-lightBlue font-barlowCondensed uppercase tracking-[0.125em] '>So, you want to travel to</h1>
-              <h1 className='text-[5rem] lg:text-[9rem] text-white uppercase break-all font-bellefair'>space</h1>
-              {/* make sure the break-all is not making the para undreada ble */}
-              <p className='text-lightBlue font-barlow leading-[180%] text-[0.9375em] lg:text-[1rem] lg:w-[510px]'>Let’s face it; if you want to go to space, you might as well genuinely go to
-                outer space and not hover kind of on the edge of it. Well sit back, and relax
-                because we’ll give you a truly out of this world experience!</p>
-            </div>
-            <div className=' h-[382px] lg:h-[272px] w-full flex justify-center items-center relative z-30'>
-                <button 
-                // onClick={() => handleHoverOver()}
-
-                onMouseEnter={() => context.setHover("white")} 
-                onMouseLeave={() => context.setHover("")}
-                onTouchStart={() => context.setHover("white")} 
-                onTouchEnd={() =>  context.setHover("")} 
-
-                className='z-50 font-bellefair relative cursor-pointer uppercase text-[1.125rem] lg:text-[2rem] 
-                text-veryDarkNavy w-[144px] lg:w-[272px] lg:min-h-[272px] min-h-[144px] rounded-full 
-                flex justify-center items-center bg-white select-none'>{context.mainButton.text}</button>
-                {/* look for the right dimensions */}
-                <div className={`lg:w-[480px] lg:h-[480px] w-[280px] h-[280px]  flex justify-center items-center rounded-full bg-${context.hover} opacity-[10%] absolute ease-in-out duration-700 z-40`}></div>
-            </div>
+    <Container>
+     <Box>
+      <Header />
+      <MobileMenu />
+      <BoxContent>
+        <div className="flex flex-col xl:flex-row w-full outline h-screen  items-center gap-[3em] border border-red-600">
+          <div className="gap-[1.5em] flex flex-col w-full  md:items-center xl:items-start border border-red-600">
+            <h1
+            className="flex flex-col uppercase text-center xl:text-start text-[1rem] font-barlowCondensed text-lightBlue tracking-[0.125em]
+            ">
+              So, you want to travel to
+              <span
+              className="text-white text-[5rem] font-bellefair break-all">
+              Space</span>
+            </h1>
+            <p className="text-lightBlue leading-[180%] font-barlow text-center xl:text-start text-[0.9375em] lg:text-[1rem] lg:w-[510px]">
+              Let’s face it; if you want to go to space, you might as well genuinely go to
+              outer space and not hover kind of on the edge of it. Well sit back, and relax
+              because we’ll give you a truly out of this world experience!
+            </p>
           </div>
+        <ExploreButton />
         </div>
-    </div>
+      </BoxContent>
+     </Box>
+    </Container>
   )
 }
 
