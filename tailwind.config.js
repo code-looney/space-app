@@ -8,7 +8,7 @@ export default {
     extend: {
       screens: {
         "lg": "768px",
-        "xl": "1440px"
+        "xl": "1240px"
       },
       fontFamily: {
         "bellefair": ["Bellefair", 'serif'],
