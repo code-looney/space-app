@@ -5,7 +5,7 @@ const ExploreButton = () => {
     const context = useContext(AppContext)
 
   return (
-    <div className='h-[382px] lg:h-[272px] w-full flex justify-center items-center relative z-30 break-all border'>
+    <div className='h-[382px] lg:h-[272px] w-full flex justify-center items-center relative z-30 break-all'>
                 <button 
                 // onClick={() => handleHoverOver()}
 
