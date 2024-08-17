@@ -23,7 +23,7 @@ const Home = () => {
               className="text-white text-[5rem] font-bellefair break-all xl:text-[9erm]">
               Space</span>  
             </h1>
-            <p className="text-lightBlue  leading-[180%] font-barlow text-center xl:text-start text-[0.9375em] lg:text-[1rem] lg:w-[510px] xl:w-[550px] xl:text-[1.125em]">
+            <p className="text-[#D5E0FF]  leading-[180%] font-barlow text-center xl:text-start text-[0.9375em] lg:text-[1rem] lg:w-[510px] xl:w-[550px] xl:text-[1.125em]">
               Let’s face it; if you want to go to space, you might as well genuinely go to
               outer space and not hover kind of on the edge of it. Well sit back, and relax
               because we’ll give you a truly out of this world experience!
