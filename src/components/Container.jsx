@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Container = ({children}) => { 
+const Container = ({children, ...rest}) => { 
     return (
-    <div className='flex flex-col bg-fixed items-center absolute bg-space h-screen bg-no-repeat bg-cover overflow-hidden w-full'>
+    <div {...rest}>
         {children}
     </div>
     )

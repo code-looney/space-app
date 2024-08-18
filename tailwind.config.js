@@ -27,7 +27,9 @@ export default {
         base: "1rem"
       },
       backgroundImage: {
-        "space":  "url(/assets/home/background-home-mobile.jpg)",
+        "space-mobile": "url(/assets/home/background-home-mobile.jpg)",
+        "space-tablet": "url(/assets/home/background-home-tablet.jpg)",
+        "space-desk": "url(/assets/home/background-home-desktop.jpg)",
         "moon": "url(/assets/destination/background-destination-mobile.jpg)"
       },
     },

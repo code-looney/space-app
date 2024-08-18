@@ -8,7 +8,7 @@ import BoxContent from "./BoxContent"
 const Home = () => {
 
   return (
-    <Container>
+    <Container className='flex flex-col bg-fixed items-center absolute bg-space-mobile md:space-tablet xl:bg-space-desk h-screen bg-no-repeat bg-cover overflow-hidden w-full'>
      <Box>
       <Header />
       <MobileMenu />
