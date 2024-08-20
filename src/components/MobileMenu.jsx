@@ -28,7 +28,7 @@ const MobileMenu = () => {
                     {context.navigation && context.navigation.map(route => (
                         <li key={route.id} className={`pl-[2em] flex uppercase tracking-[0.125em] border-r-4 gap-3 hover:border-opacity-50 ease-in-out duration-700 hover:border-r-white 
                             ${context.hoverUnderlineColor === route.id ? 'border-r-white' : 'border-r-transparent'}`}>
-                            <NavLink onClick={() => context.handleNavLinkClick(route.id)} 
+                            <NavLink to={`/${route.path}`} onClick={() => context.handleNavLinkClick(route.id)} 
                                 className="flex gap-3 justify-self-center text-[1rem] font-barlowCondensed">
                                 <span className='font-bold'>{route.order}</span>
                                 {route.page}
