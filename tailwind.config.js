@@ -27,9 +27,13 @@ export default {
         base: "1rem"
       },
       backgroundImage: {
-        "space-mobile": "url(/assets/home/background-home-mobile.jpg)",
-        "space-tablet": "url(/assets/home/background-home-tablet.jpg)",
-        "space-desk": "url(/assets/home/background-home-desktop.jpg)",
+        "home-mobile": "url(/assets/home/background-home-mobile.jpg)",
+        "home-tablet": "url(/assets/home/background-home-tablet.jpg)",
+        "home-desk": "url(/assets/home/background-home-desktop.jpg)",
+
+        "destination-mobile": "url(/assets/destination/background-destination-mobile.jpg)",
+        "destination-tablet": "url(/assets/home/background-destination-tablet.jpg)",
+        "destination-desk": "url(/assets/home/background-destination-desktop.jpg)",
         "moon": "url(/assets/destination/background-destination-mobile.jpg)"
       },
     },

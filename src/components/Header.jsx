@@ -22,8 +22,8 @@ const Header = () => {
             return (
               <li key={route.id} className={`h-full items-center flex-col justify-center relative z-20 xl:z-0 border-b-4 flex gap-3 ${context.hoverUnderlineColor === route.id ? null : "hover:border-opacity-50 "} ease-in-out duration-700 hover:border-b-white 
               ${context.hoverUnderlineColor === route.id ? 'border-b-white' : 'border-b-transparent'}`}>
-              <NavLink to={`/`}
-                  onClick={() => context.handleNavLinkHover(route.id)}
+              <NavLink to={`/${route.path}`}
+                  onClick={() => context.handleNavLinkClick(route.id)}
                   className={`flex gap-3`}>
                   <span className={`${route.order === "00" ? "hidden" : ""} ${route.order === "00" ? "xl:block" : ""}`}>{route.order}</span>
                 {route.page}

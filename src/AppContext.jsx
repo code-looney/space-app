@@ -9,6 +9,7 @@ function AppProvider({ children }) {
     const [pageOrder, setPageOrder] = useState("");
     const [hideOrUnhideOrder, setHideOrUnhideOrder] = useState(null);
     const [hoverUnderlineColor, setHoverUnderlineColor] = useState(1);
+    const [destinationHoverUnderlineColor, setDestonationHoverUnderlineColor] = useState(1);
     const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -22,55 +23,30 @@ function AppProvider({ children }) {
     }, []);
 
     const navigation  = [
-        {
-            page: "Home",
-            order: "00",
-            id: 1
-        },
-        {
-            page: "destination",
-            order: "01",
-            id: 2 
-        },
-        {
-            page: "crew",
-            order: "02",
-            id: 3
-
-        },
-        {
-            page: "technology",
-            order: "03",
-            id: 4 
-        },
+        { page: "Home", order: "00", id: 1, path: ""},
+        { page: "destination", order: "01", id: 2, path: "destination"},
+        { page: "crew", order: "02", id: 3, path: "crew"},
+        { page: "technology", order: "03", id: 4, path: "technology"},
     ]
 
     const destinationNavigation = [
-        {
-            page: "Moon",
-            id: 1
-        },
-        {
-            page: "mars",
-            id: 2,
-        }, 
-        {
-            page: "Europa",
-            id: 3
-        }, 
-        {
-            page: "Titan",
-            id: 4
-        }
+        {page: "Moon", id: 1, path: "moon"},
+        {page: "mars", id: 2,  path: "mars"}, 
+        {page: "Europa", id: 3, path: "europa"}, 
+        {page: "Titan", id: 4, path: "titan"}
     ]
-
 
     const mainButton = {
         text: "Explore"
     }
 
-    const handleNavLinkHover = (id) => {
+    const handleNavLinkClick = (id) => {
         setHoverUnderlineColor(id);
+
+    };
+
+    const handleDestinationNavLinkClick = (id) => {
+        setDestonationHoverUnderlineColor(id);
     };
 
     const handleToggleMobileMenu = () => {
@@ -91,13 +67,15 @@ function AppProvider({ children }) {
         setHideOrUnhideOrder,
         hoverUnderlineColor,
         setHoverUnderlineColor,
-        handleNavLinkHover,
+        handleNavLinkClick,
         handleToggleMobileMenu,
         toggleMobileMenu,
         isOpen,
         navigation,
         mainButton,
         destinationNavigation,
+        destinationHoverUnderlineColor,
+        handleDestinationNavLinkClick,
         toggleMobileMenuIcons: toggleMobileMenu ? "close" : "hamburger" // Derived state
     };
 
