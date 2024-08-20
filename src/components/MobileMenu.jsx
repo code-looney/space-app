@@ -1,10 +1,28 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { AppContext } from '../AppContext';
 import { NavLink } from 'react-router-dom';
 import { Transition } from '@headlessui/react';
 
 const MobileMenu = () => {
     const context = useContext(AppContext);
+    const menuRef = useRef(null);
+
+    const handleClickOutside = (event) => {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+            context.handleToggleMobileMenu();
+        }
+    };
+
+    useEffect(() => {
+        if (context.toggleMobileMenu) {
+            document.addEventListener('mousedown', handleClickOutside);
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [context.toggleMobileMenu]);
 
     return (
         <Transition
@@ -16,7 +34,7 @@ const MobileMenu = () => {
           leaveFrom="transform translate-x-0 opacity-100"
           leaveTo="transform translate-x-full opacity-0"
           >
-            <div className={`flex-col w-[254px] h-full right-0 top-0 absolute no-scrollbar md:hidden 
+            <div ref={menuRef} className={`flex-col w-[254px] h-full right-0 top-0 absolute no-scrollbar md:hidden 
               ${context.toggleMobileMenu === false ? `transition transform duration-700 ease-in-out translate-x-0 opacity-100` : "" }
                text-white backdrop-blur-xl z-40 bg-white/5`}>
                 <ul className='h-full w-full flex flex-col gap-[2em]'>
