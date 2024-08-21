@@ -27,11 +27,11 @@ const Mars = () => {
         <hr className="w-full opacity-25 my-4 xl:w-[550px]" />
         <div className="mt-6 flex flex-col gap-6 lg:gap-0 lg:flex-row items-center justify-center xl:justify-start xl:text-left text-center">
           <div className="flex flex-col lg:w-[245px] lg:h-[61px] xl:px-0 gap-2">
-            <p className="text-lightBlue text-[0.875em] font-barlowCondensed tracking-widest">AVG. DISTANCE</p>
+            <p className="text-[#D5E0FF] text-[0.875em] font-barlowCondensed tracking-widest">AVG. DISTANCE</p>
             <p className="text-white text-[1.75em] font-bellefair">225 MIL. KM</p>
           </div>
           <div className="flex flex-col lg:w-[245px] lg:h-[61px] xl:px-0 gap-2">
-            <p className="text-lightBlue text-[0.875em] font-barlowCondensed tracking-widest">EST. TRAVEL TIME</p>
+            <p className="text-[#D5E0FF]text-[0.875em] font-barlowCondensed tracking-widest">EST. TRAVEL TIME</p>
             <p className="text-white text-[1.75em] font-bellefair">9 MONTHS</p>
           </div>
         </div>
