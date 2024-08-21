@@ -14,9 +14,11 @@ const DestinationNavLinks = () => {
           <li key={route.id} 
             className={`flex uppercase items-center font-normal justify-center tracking-[0.125em] border-b-[0.1875em] gap-3 hover:border-opacity-50 ease-in-out duration-700 hover:border-b-white 
               ${context.destinationHoverUnderlineColor === route.id ? 'border-b-white' : 'border-b-transparent'}`}>
+                {/* when refresh the page, the underline color will go reset.
+                Think of a sulution to not have the underline color when active page */}
             <NavLink 
               to={`/destination/${route.path}`}  // Ensure it matches the route structure
-              onClick={() => context.handleDestinationNavLinkClick(route.id)} 
+              onClick={() => context.handleDestinationNavLinkClick(route.id)}
               className="flex gap-3 h-[32px] justify-self-center text-[0.875rem] lg:text-[1rem] font-barlowCondensed">
               {route.page}
             </NavLink>
