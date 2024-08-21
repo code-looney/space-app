@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import { AppContext } from '../AppContext';
 import { NavLink } from 'react-router-dom';
 
-const DestinationNavLinks = ({...rest}) => {
+const DestinationNavLinks = () => {
   const context = useContext(AppContext);
 
   return (
-    <div {...rest} className={`w-[327px] xl:h-auto flex justify-center xl:w-full items-center right-0 top-0 no-scrollbar pb-[1em]
+    <div className={`w-[327px] xl:h-auto flex justify-center xl:w-full items-center right-0 top-0 no-scrollbar pb-[1em]
       ${context.toggleMobileMenu === false ? `transition transform duration-700 ease-in-out translate-x-0 opacity-100` : "" }
       text-white`}>
       <ul className='h-full flex w-full gap-[2em] justify-center items-center xl:justify-start'>
