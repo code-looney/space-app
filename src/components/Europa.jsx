@@ -8,9 +8,9 @@ const Europa = () => {
       <img className="w-[150px] h-[150px]" src="/assets/destination/image-europa.webp" alt="Moon image" />
       </div>
     <DestinationNavLinks />
-    <div className='w-[327px] h-auto flex flex-col justify-center items-center mb-[2em]'>
+    <div className='w-[327px] h-auto flex flex-col justify-center items-center mb-[.5em]'>
       <h1 className="text-white text-[3.5rem] font-bellefair break-all xl:text-[9rem] my-[.3em]">EUROPA</h1>
-      <p className="text-[#D5E0FF] leading-[180%] font-barlow text-center xl:text-start text-[0.9375em] lg:text-[1rem] lg:w-[510px] xl:w-[550px] xl:text-[1.125em]">
+      <p className="text-[#D5E0FF] h-[150px] leading-[180%] font-barlow text-center xl:text-start text-[0.9375em] lg:text-[1rem] lg:w-[510px] xl:w-[550px] xl:text-[1.125em]">
       The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
       winter lover’s dream. With an icy surface, it’s perfect for a bit of 
       ice skating, curling, hockey, or simple relaxation in your snug 

@@ -13,6 +13,11 @@ const Destination = () => {
      <Box>
       <Header />
       <MobileMenu />
+      <div className="flex lg:pl-[2.5em] lg:mt-[3em] mt-[1em] lg:justify-start justify-center">
+        <h1 className='text-[1rem] lg:text-[1.25rem] flex gap-[1.5em] justify-center items-center text-lightBlue font-barlowCondensed uppercase tracking-[0.125em] '>
+          <span className='font-bold opacity-25'>01</span> Pick your destination
+        </h1>
+      </div>
       <BoxContent>
         <Outlet />
       </BoxContent>

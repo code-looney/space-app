@@ -8,9 +8,9 @@ const Titan = () => {
       <img className="w-[150px] h-[150px]" src="/assets/destination/image-titan.webp" alt="Moon image" />
       </div>
     <DestinationNavLinks />
-    <div className='w-[327px] h-auto flex flex-col justify-center items-center mb-[2em]'>
+    <div className='w-[327px] h-auto flex flex-col justify-center items-center mb-[.5em]'>
       <h1 className="text-white text-[3.5rem] font-bellefair break-all xl:text-[9rem] my-[.3em]">TITAN</h1>
-      <p className="text-[#D5E0FF] leading-[180%] font-barlow text-center xl:text-start text-[0.9375em] lg:text-[1rem] lg:w-[510px] xl:w-[550px] xl:text-[1.125em]">
+      <p className="text-[#D5E0FF] h-[150px] leading-[180%] font-barlow text-center xl:text-start text-[0.9375em] lg:text-[1rem] lg:w-[510px] xl:w-[550px] xl:text-[1.125em]">
       The only moon known to have a dense atmosphere other than Earth, Titan 
       is a home away from home (just a few hundred degrees colder!). As a 
       bonus, you get striking views of the Rings of Saturn.
