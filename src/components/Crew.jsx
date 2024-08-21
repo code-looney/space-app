@@ -1,8 +1,20 @@
 import React from 'react'
+import Container from './Container'
+import Box from './Box'
+import Header from './Header'
+import MobileMenu from './MobileMenu'
+import BoxContent from './BoxContent'
 
 const Crew = () => {
   return (
-    <div>Crew</div>
+    <Container className='flex flex-col bg-fixed items-center absolute bg-crew-mobile md:bg-crew-tablet xl:bg-crew-desk h-screen bg-no-repeat bg-cover overflow-hidden w-full'>
+    <Box>
+     <Header />
+     <MobileMenu />
+     <BoxContent>
+     </BoxContent>
+    </Box>
+   </Container>
   )
 }
 

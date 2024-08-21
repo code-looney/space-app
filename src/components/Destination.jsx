@@ -9,7 +9,7 @@ import { Outlet } from "react-router-dom"
 const Destination = () => {
 
   return (
-    <Container className='flex flex-col bg-fixed items-center absolute bg-destination-mobile md:destination-tablet xl:bg-destination-desktop h-screen bg-no-repeat bg-cover overflow-hidden w-full'>
+    <Container className='flex flex-col bg-fixed items-center absolute bg-destination-mobile md:bg-destination-tablet xl:bg-destination-desk h-screen bg-no-repeat bg-cover overflow-hidden w-full'>
      <Box>
       <Header />
       <MobileMenu />

@@ -32,9 +32,13 @@ export default {
         "home-desk": "url(/assets/home/background-home-desktop.jpg)",
 
         "destination-mobile": "url(/assets/destination/background-destination-mobile.jpg)",
-        "destination-tablet": "url(/assets/home/background-destination-tablet.jpg)",
-        "destination-desk": "url(/assets/home/background-destination-desktop.jpg)",
-        "moon": "url(/assets/destination/background-destination-mobile.jpg)"
+        "destination-tablet": "url(/assets/destination/background-destination-tablet.jpg)",
+        "destination-desk": "url(/assets/destination/background-destination-desktop.jpg)",
+
+        "crew-mobile": "url(/assets/crew/background-crew-mobile.jpg)",
+        "crew-tablet": "url(/assets/crew/background-crew-tablet.jpg)",
+        "crew-desk": "url(/assets/crew/background-crew-desktop.jpg)"
+
       },
     },
   },
