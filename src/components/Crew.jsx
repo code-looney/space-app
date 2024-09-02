@@ -20,7 +20,7 @@ const Crew = () => {
       <Container className="flex flex-col gap-[.5em]">
         <SubTitle>Commander</SubTitle>
         <Span>Douglas Hurley</Span>
-        <p className='text-[#D5E0FF] text-center'>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. 
+        <p className='text-[#D5E0FF] text-center leading-[180%] text-[0.9375rem]'>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. 
           He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
       </Container>
      </BoxContent>
