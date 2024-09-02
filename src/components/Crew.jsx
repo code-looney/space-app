@@ -6,6 +6,8 @@ import MobileMenu from './MobileMenu'
 import BoxContent from './BoxContent'
 import Title from './Title'
 import TitleNumber from './TitleNumber'
+import SubTitle from './SubTitle'
+import Span from './Span'
 
 const Crew = () => {
   return (
@@ -15,6 +17,12 @@ const Crew = () => {
      <Title><TitleNumber>02</TitleNumber>MEET YOUR CREW</Title>
      <MobileMenu />
      <BoxContent>
+      <Container className="flex flex-col gap-[.5em]">
+        <SubTitle>Commander</SubTitle>
+        <Span>Douglas Hurley</Span>
+        <p className='text-[#D5E0FF] text-center'>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. 
+          He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+      </Container>
      </BoxContent>
     </Box>
    </Container>
